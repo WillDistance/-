@@ -1,0 +1,43 @@
+C:\Users\Thinkive>imp
+
+Import: Release 11.2.0.1.0 - Production on 星期三 5月 8 19:17:22 2019
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+用户名: simulate
+口令:
+
+连接到: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+仅导入数据 (yes/no): no > no
+
+导入文件: EXPDAT.DMP> C:\Users\Thinkive\Desktop\tables.dmp
+
+输入插入缓冲区大小 (最小为 8192) 30720>
+
+经由常规路径由 EXPORT:V11.02.00 创建的导出文件
+已经完成 ZHS16GBK 字符集和 AL16UTF16 NCHAR 字符集中的导入
+导出客户机使用 US7ASCII 字符集 (可能的字符集转换)
+导出服务器使用 UTF8 NCHAR 字符集 (可能的 ncharset 转换)
+只列出导入文件的内容 (yes/no): no >
+
+由于对象已存在, 忽略创建错误 (yes/no): no >
+
+导入权限 (yes/no): yes >
+
+导入表数据 (yes/no): yes >
+
+导入整个导出文件 (yes/no): no > yes
+
+. 正在将 SIMULATE 的对象导入到 SIMULATE
+. 正在将 SIMULATE 的对象导入到 SIMULATE
+. . 正在导入表                "T_SIM_ACTIVITY"导入了           1 行
+. . 正在导入表      "T_SIM_ACTIVITY_ELIMINATE"导入了          14 行
+. . 正在导入表                 "T_SIM_ACCOUNT"导入了        4655 行
+. . 正在导入表             "T_SIM_ACCOUNT_END"导入了          34 行
+. . 正在导入表               "T_PORTFOLIO_SUM"导入了        4657 行
+. . 正在导入表          "T_SIM_ACTIVITY_APPLY"导入了        1895 行
+. . 正在导入表               "T_SIM_EXEC_AGGE"导入了           0 行
+. . 正在导入表          "T_SIM_HIST_EXEC_AGGE"导入了        3235 行
+成功终止导入, 没有出现警告。

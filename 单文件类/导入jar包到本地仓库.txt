@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=C:\Users\Thinkive\Desktop\thinkive-works-plat-java-4.0.7.jar -DgroupId=thinkive.base -DartifactId=thinkive-works-plat-java -Dversion=4.0.7 -Dpackaging=jar

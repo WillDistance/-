@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="asm-2.2.3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/asm-2.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/commons-lang-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/cxf-2.2.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/geronimo-activation_1.1_spec-1.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/geronimo-annotation_1.0_spec-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/geronimo-jaxws_2.1_spec-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/geronimo-stax-api_1.0_spec-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/geronimo-ws-metadata_2.0_spec-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/jackson-all-1.7.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/jaxb-api-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/jaxb-impl-2.1.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/log4j-1.2.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/neethi-2.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/saaj-api-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/saaj-impl-1.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/wsdl4j-1.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/wstx-asl-3.2.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/xml-resolver-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib1.5/XmlSchema-1.4.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

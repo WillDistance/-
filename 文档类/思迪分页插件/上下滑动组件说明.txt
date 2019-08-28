@@ -1,0 +1,17 @@
+/**
+ * 上下滑动组件
+ */
+/**
+ * isPagingType 是否分页，true表示分页类型，false表示微博累加类型 
+ * headRowHeight 头部的高度，只有传值并不等于0的时候才表示有头部 
+ * perRowHeight 每条数据的高度，分页时必传 rowNum 显示的每页数据条数，分页时必传
+ * visibleHeight 显示内容区域的高度，当isPaingType为false时传 
+ * hasPullDown 是否显示下拉提示，默认为true，显示组件顶部的下拉更新提示 
+ * container container元素的父元素 
+ * wrapper wrapper元素的父元素 
+ * downHandle 下拉完毕执行的方法 
+ * upHandle 上拉完毕后执行的方法 
+ * momentum 是否开启拖动惯性，默认是true
+ */
+ 
+ 参考：http://tjjd.dxzq.net:8085/m/tj/views/shouye/search.html

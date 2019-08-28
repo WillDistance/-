@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	   	<meta name="format-detection" content="telephone=no" />
+	    <meta name="apple-mobile-web-app-capable" content="yes"  />
+	    <meta name="browsermode" content="application" />
+	    <meta name="x5-page-mode" content="app" />
+	    <title>东兴投资者教育基地</title>  
+        <link href="/m/2.0.0/css/hsea.min.css" rel="stylesheet">
+	    <link rel="stylesheet" href="/m/tj/css/animate.css" />
+	    <link rel="stylesheet" href="/m/tj/css/common.css" />
+	    <link rel="stylesheet" href="/m/tj/css/style.css" />
+	</head>
+	<body>
+		<div class="page"  id="shouye_search" data-pageTitle="搜索"  data-script='tj/scripts/shouye/search.js' data-urlParam="true" >
+			<section class="main fixed" data-page="home">
+				<header class="header">
+					<div class="header_inner no_bb">
+						<a href="javascript:;" class="header_back"></a>
+						<div class="search_box">
+							<em></em>
+							<input id="keyword" type="text" placeholder="请输入关键字">
+						</div>
+						<div class="header_right">
+							<a class="head_menu"></a>						
+						</div>
+					</div>
+				</header>
+				<article class="content">
+					<div class="container">
+						<div class="tab_box">
+							<div class="tab_item">课程</div>
+							<div class="tab_item">文章</div>
+							<div class="tab_item">视频</div>
+						</div>
+						<div class="tab_content study_box sub_type1">
+							<div class="iscroll_vWrapper" id="wrapper" style="position: relative;">
+								<div class="iscroll_vScroller">
+									<div class="iscroll_pullDown scrolledUp" style="display: none; text-align: center;">
+										<span class="pullDownIcon"></span>
+										<div class="pullDownLabel">下拉刷新</div>
+									</div>
+
+									<div class="view_list" data-is-content="true">
+										<!--多个分页 TODO ID要改-->
+										<!--TODO   id值格式："_"+getPageCode().replaceAll("/", "_")+"_pro_main"   -->
+										<script id="_study_list" type="text/html">
+											<ul>
+												{{each data as article i}}
+													{{if data.length != 0 }}
+														<li>
+															<strong>{{article.title}}</strong>
+															<p>{{article.brief}}</p>
+															<div class="study_text">
+																<span>{{article.c_data}}</span>
+																{{if article.type == 0 }}
+																	<span class="dot article_detail" article_id="{{article.article_id}}">
+																{{/if}}
+																{{if article.type != 0 }}
+																	<span class="dot article_link" article_id="{{article.article_id}}" link="{{article.link_url}}">
+																{{/if}}
+																我要学习</span>
+																<span class="dot toTest" catalog="{{article.name}}">我要测试</span>
+																<span class="read_num"><i></i>{{article.hits}}</span>
+															</div>
+														</li>
+													{{/if}}
+												{{/each}}
+											</ul>
+										</script>
+										<script id="_article_list" type="text/html">
+											<ul>
+												{{each data as article i}}
+													{{if data.length != 0 }}
+														{{if article.type == 0 }}
+															<li article_id="{{article.article_id}}" class="article_detail">
+														{{/if}}
+														{{if article.type != 0 }}
+															<li class="article_link" article_id="{{article.article_id}}" link="{{article.link_url}}">
+														{{/if}}
+																<strong>{{article.title}}</strong>
+																<p>{{article.brief}}</p>
+																<div class="study_text">
+																	<span>{{article.c_data}}</span>
+																	<span class="dot c_orange">{{article.source}}</span>
+																	<span class="read_num"><i></i>{{article.hits}}</span>
+																</div>
+															</li>
+													{{/if}}
+												{{/each}}
+											</ul>
+										</script>
+										<script id="_video_list" type="text/html">
+											{{each data as video i}}
+												{{if data.length != 0 }}
+													<div class="video_item" video_id="{{video.video_id}}" type="{{video.type}}">
+														<em class="video_thumb" style="background-image: url({{video.video_img}})"></em>
+														<p>{{video.video_name}}</p>
+														<span class="icon_video"><em></em>时长：{{video.video_sed}}</span>
+														<span class="video_date">{{video.show_date}}</span>
+														<span class="read_num"><i></i>{{video.video_watch_num}}</span>
+													</div>
+												{{/if}}
+											{{/each}}
+										</script>
+										<div class="video_list" id="video_list">
+
+										</div>
+										<div class="study_ul" id="article_list">
+
+										</div>
+										<div class="study_ul" id="study_list">
+
+										</div>
+										<div id="end_page"></div>
+									</div>
+									<div class="iscroll_pullUp" style="display: none; text-align: center;">
+										<span class="pullUpIcon"></span>
+										<div class="pullUpLabel">上拉加载下一页</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<div id="menu_right"></div>
+			</section>
+			<script src="/m/2.0.0/lib/zepto.min.js"></script>
+			<script src="/m/2.0.0/js/hsea.min.js"></script>  		
+		</div>
+	</body>
+</html>

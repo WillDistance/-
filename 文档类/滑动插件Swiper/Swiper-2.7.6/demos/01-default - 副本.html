@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+  <link rel="stylesheet" href="../dist/idangerous.swiper.css">
+<link rel="stylesheet" href="http://60.173.222.37:35216/tjjs/css/animate.css" />
+			<link rel="stylesheet" href="C:/Users/Thinkive/Desktop/style.css" />
+			<link rel="stylesheet" href="http://60.173.222.37:35216/tjjs/js/swiper.2.6.7/idangerous.swiper.css" />
+			<link rel="stylesheet" href="http://60.173.222.37:35216/tjjs/css/idangerous.swiper.3dflow.css" />
+</head>
+<body>
+  <div class="link_box clearfix ">
+			<div class="linkbleft "></div>
+            <div class="linkbright "></div>
+            
+            <div class="swiper-container swiper2" style="width: 90%">
+			<ul class = "swiper-wrapper">
+				<li class="swiper-slide">
+					<a href="http://www.csrc.gov.cn/pub/newsite/" class="link_logo1" target="_blank"><img src="http://60.173.222.37:35216/tjjs/images/link1.png" /></a>
+				</li>
+				<li class="swiper-slide">
+					<a href="http://www.sac.net.cn/" class="link_logo2" target="_blank"><img src="http://60.173.222.37:35216/tjjs/images/link2.png" /></a>
+				</li>
+				<li class="swiper-slide">
+					<a href="http://www.sipf.com.cn/index.shtml" class="link_logo3" target="_blank"><img src="http://60.173.222.37:35216/tjjs/images/link3.png" /></a>
+				</li>
+				<li class="swiper-slide">
+					<a href="http://edu.sse.com.cn/" class="link_logo4" target="_blank"><img src="http://60.173.222.37:35216/tjjs/images/link4.png" /></a>
+				</li>
+				<li class="swiper-slide">
+					<a href="http://www.csrc.gov.cn/pub/newsite/" class="link_logo1" target="_blank"><img src="http://60.173.222.37:35216/tjjs/images/link1.png" /></a>
+				</li>
+				<li class="swiper-slide">
+					<a href="http://www.sipf.com.cn/index.shtml" class="link_logo3" target="_blank"><img src="http://60.173.222.37:35216/tjjs/images/link3.png" /></a>
+				</li>
+				<li class="no_mr swiper-slide">
+					<a href="http://www.szse.cn/main/investor/" class="link_logo5" target="_blank"><img src="http://60.173.222.37:35216/tjjs/images/link5.png" /></a>
+				</li>
+			</ul>
+			</div>
+		</div>
+    <div class="pagination"></div>
+  </div>
+  <script src="js/jquery-1.10.1.min.js"></script>
+  <script src="../dist/idangerous.swiper.min.js"></script>
+  <script>
+var swiper = new Swiper('.swiper2', {
+    slidesPerView: 4,
+    centeredSlides: false,
+    spaceBetween: 30
+  });
+  $(".linkbleft").click(function(){
+  console.log("sdf")
+	  swiper.swipePrev();
+  });
+  $(".linkbright").click(function(){
+  console.log("sdf")
+	  swiper.swipeNext();
+  });
+  </script>
+</body>
+</html>

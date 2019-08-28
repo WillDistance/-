@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>capture screen</title>
+</head>
+<body>
+<video id="video" controls="controls">
+<!-- <source src="./video/v_01.mp4"> -->
+<source src="https://mat1.gtimg.com/news/jianianhua2016/source/d01.mp4">
+</video>
+<div id="output"></div>
+<script src="./js/jquery.min.js"></script>
+<script type="text/javascript">
+(function(){
+var video, output;
+var scale = 0.8;
+var initialize = function() {
+output = $("#output")[0];
+video = $("#video")[0];
+video.addEventListener('loadeddata',captureImage);
+};
+ 
+var captureImage = function() {
+            var canvas = document.createElement("canvas");
+            canvas.width = video.width * scale;
+            canvas.height = video.height * scale;
+            canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+ 
+            var img = document.createElement("img");
+            //img.src = canvas.toDataURL("image/png");//这样写会报错，可能是因为在本地执行的问题
+			img.src="./img/img.png"
+			img.style.width=canvas.width;
+			img.style.height=canvas.height;
+            output.appendChild(img);
+};
+initialize();
+})();
+</script>
+</body>
+</html>

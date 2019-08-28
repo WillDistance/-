@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test</title>
+  <meta name="site" content="content site">
+  <meta name="Site" content="content Site">
+  <meta name="title" content="content title">
+  <meta name="Title" content="content Title">
+    <meta name="description" content="content description">
+	<meta name="Description" content="content Description">
+
+  <link rel="stylesheet" href="../dist/css/share.min.css">
+
+  <style>
+  .row{padding: 20px 0 0 20px}
+  .row-pad{padding: 20px 0 0 60px}
+  </style>
+</head>
+<body>
+  <div class="row-pad">
+    <h1>test</h1>
+  </div>
+
+  <ol>
+	<h5>一下5个是使用html初始化</H5>
+    <li class="row">
+      <div class="social-share" data-sites="weibo, qq, qzone"></div>
+    </li>
+    <li class="row">
+      <div class="share-component" data-disabled="wechat , facebook, twitter, google"></div>
+    </li>
+    <li class="row">
+      <div class="social-share"></div>
+    </li>
+    <li class="row">
+      <div class="social-share" data-initialized="true">
+        <a href="#" class="social-share-icon icon-weibo"></a>
+        <a href="#" class="social-share-icon icon-qq"></a>
+        <a href="#" class="social-share-icon icon-qzone"></a>
+		<a href="#" class="social-share-icon icon-wechat"></a>
+      </div>
+    </li>
+    <li class="row">
+      <div class="social-share" data-mode="prepend">
+        <a href="javascript:" class="social-share-icon icon-heart"></a>
+      </div>
+    </li>
+	
+	<h5>一下4个是使用js初始化</H5>
+	
+    <li class="row">
+		<p>初始化不传参数，默认展示全部的分享按钮：</p>
+      <div id="share-1"></div>
+    </li>
+	
+    <li class="row">
+		<div id="share-2"></div>
+    </li>
+    <li class="row">
+      <div id="share-3" data-sites="weibo, qq, qzone"></div>
+    </li>
+    <li class="row">
+      <div id="share-4" data-disabled="wechat , facebook, twitter, google"></div>
+    </li>
+	
+	<p>建议使用demo：</p>
+	<li class="row">
+      <div id="share"></div>
+    </li>
+  </ol>
+
+<script src="../src/js/social-share.js"></script>
+<script src="../src/js/qrcode.js"></script>
+<script>
+socialShare('#share-1');
+socialShare('#share-2', {sites: ['qzone', 'qq', 'weibo','wechat']});
+socialShare('#share-3');
+socialShare('#share-4');
+
+//sites可选：['weibo', 'qq', 'wechat', 'douban', 'qzone', 'linkedin', 'facebook', 'twitter', 'google'],
+var param={
+	url                 : window.location.href, 	// 网址，默认使用 window.location.href
+	source              : '来源', 						// 来源（QQ空间会用到）, 默认读取head标签的content：<meta name="site" content="http://overtrue" />
+	title               : '分享demo', 						// 标题，默认读取 document.title 或者 <meta name="title" content="share.js" />
+	origin              : '', 						// 分享 @ 相关 twitter 账号，仅仅在分享到推特时使用
+	description         : '分享的描述', 						// 描述, 默认读取head标签：<meta name="description" content="PHP弱类型的实现原理分析" />
+	image               : 'https://dzedu.dgzq.com.cn/dgzq/images/footer_logo.png', 						// 图片, 默认取网页中第一个img标签
+	sites               : ['qzone', 'qq','wechat'],		// 启用的站点
+	disabled            : [], 				// 禁用的站点
+	wechatQrcodeTitle   : '微信扫一扫：分享', 								// 微信二维码提示文字
+	wechatQrcodeHelper  : '<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>'
+};
+socialShare('#share',param);
+</script>
+</body>
+</html>
